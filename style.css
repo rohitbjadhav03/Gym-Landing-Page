@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #3a4242;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+   /* Navigation */
+
+.nav {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3a4242;
+  z-index: 1000;
+}
+
+.nav .logo img {
+  width: 110px;
+}
+
+.nav .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav .links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav .links a:hover {
+  color:  #ff9900;
+}
+
+.btn-register {
+  background-color:  #ff9900;
+  color: #000;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #ffa733;
+  transform: scale(1.05);
+}
+
+/* Main Section  */
+.main {
+  margin-left: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 3rem;
+}
+
+.text {
+  flex: 1 1 50%;
+  padding-right: 2rem;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.text-heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.text-heading p {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-heading img {
+  height: 5rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.para {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+.join-btn {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 2rem;
+  color:  #ff9900;
+  font-weight: 600;
+}
+
+.cross {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.photo {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Footer */
+
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footer ul li {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.style {
+  cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    padding: 1rem;
+  }
+
+  .text-heading {
+    justify-content: center;
+  }
+
+  .photo {
+    margin-top: 2rem;
+  }
+}
+
+/* Simple Page Layouts */
+
+.simple-page {
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.simple-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.simple-page p,
+.simple-page ul {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.simple-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.simple-page ul li {
+  margin: 0.5rem 0;
+}
+
+/* Contact Form */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.contact-form button {
+  width: fit-content;
+  align-self: center;
+}
+
+/* Registration Form */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #2e3636;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.register-form input,
+.register-form select {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.register-form button {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+/* Motivation Quote */
+
+.motivation {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  color:  #ff9900;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  animation: fadeInUp 1.2s ease-in-out forwards;
+}

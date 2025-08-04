@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Pande Fitness Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="nav">
+      <div class="logo">
+        <img src="./assets/logo2.png" alt="Pande Fitness" />
+      </div>
+      <nav class="links">
+        <a href="index.html" class="link">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="button">
+        <button class="btn-register" id="registerBtn" onclick="window.location.href = 'register.html';">Register Now</button>
+      </div>
+    </header>
+
+    <!-- Registration Form -->
+    <main class="main simple-page">
+      <div class="text">
+        <h1>Join Pande Fitness Hub</h1>
+        <p>Fill out the form below to start your fitness journey.</p>
+
+        <form class="register-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <select required>
+            <option value="">Select Membership Plan</option>
+            <option value="basic">Basic (₹999/month)</option>
+            <option value="standard">Standard (₹1999/month)</option>
+            <option value="premium">Premium (₹2999/month)</option>
+          </select>
+          <button type="submit" class="btn-register">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
